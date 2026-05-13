@@ -1,6 +1,3 @@
-/* App-local styles. Mesh chrome (settings drawer, self-ref bar) is provided by
- * @baditaflorin/mesh-common/styles.css imported in main.tsx. */
-
 :root {
   color-scheme: dark;
 }
@@ -19,33 +16,159 @@ body,
   background: var(--mesh-bg);
   color: var(--mesh-fg);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-  -webkit-tap-highlight-color: transparent;
 }
 
-.feature-placeholder {
-  padding: 6rem 1.5rem 2rem;
-  text-align: center;
+.ffm-screen {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 4.5rem 1.25rem 6rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  gap: 0.9rem;
 }
 
-.feature-placeholder h1 {
+.ffm-header h1 {
   font-size: 1.6rem;
-  margin: 0;
+  margin: 0 0 0.25rem;
   color: var(--mesh-accent);
 }
 
-.feature-placeholder p {
-  max-width: 32rem;
+.ffm-status {
   margin: 0;
-  opacity: 0.85;
-  line-height: 1.5;
+  opacity: 0.7;
+  font-size: 0.9rem;
 }
 
-.feature-status {
+.ffm-privacy {
+  background: rgba(251, 146, 60, 0.1);
+  border: 1px solid rgba(251, 146, 60, 0.3);
+  border-radius: 0.45rem;
+  padding: 0.6rem 0.85rem;
+}
+
+.ffm-privacy p {
+  margin: 0;
   font-size: 0.85rem;
+  opacity: 0.9;
+  line-height: 1.45;
+}
+
+.ffm-controls {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.4rem;
+}
+
+.ffm-name-input {
+  padding: 0.65rem 0.9rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--mesh-fg);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.4rem;
+}
+
+.ffm-share {
+  padding: 0.5rem 1.1rem;
+  background: transparent;
+  color: var(--mesh-fg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.ffm-share:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ffm-share.is-on {
+  background: var(--mesh-accent);
+  color: #0e1117;
+  border-color: var(--mesh-accent);
+  font-weight: 600;
+}
+
+.ffm-error {
+  margin: 0;
+  padding: 0.5rem 0.8rem;
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.4);
+  border-radius: 0.4rem;
+  color: #fda4af;
+  font-size: 0.85rem;
+}
+
+.ffm-map {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+}
+
+.ffm-map svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.4rem;
+}
+
+.ffm-section-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   opacity: 0.6;
+  margin: 0 0 0.4rem;
+}
+
+.ffm-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.ffm-list li {
+  display: grid;
+  grid-template-columns: 1rem 1fr auto;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 0.4rem;
+}
+
+.ffm-list li.is-stale {
+  opacity: 0.55;
+}
+
+.ffm-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.ffm-list-name {
+  font-weight: 500;
+}
+
+.ffm-list-meta {
+  opacity: 0.55;
+  font-size: 0.78rem;
   font-variant-numeric: tabular-nums;
+}
+
+.ffm-dist {
+  grid-column: 2 / -1;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--mesh-accent);
+  font-weight: 600;
+}
+
+.ffm-empty {
+  opacity: 0.5;
+  font-style: italic;
 }
