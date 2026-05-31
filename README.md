@@ -1,7 +1,7 @@
 # mesh-find-my-family
 
 [![pages](https://img.shields.io/badge/live-baditaflorin.github.io%2Fmesh-find-my-family-fb923c)](https://baditaflorin.github.io/mesh-find-my-family/)
-[![version](https://img.shields.io/badge/version-0.1.0-blue)](https://github.com/baditaflorin/mesh-find-my-family/blob/main/package.json)
+[![version](https://img.shields.io/badge/version-0.1.1-blue)](https://github.com/baditaflorin/mesh-find-my-family/blob/main/package.json)
 [![license](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
 > Opt-in ephemeral family location sharing over the mesh, no account, no server
